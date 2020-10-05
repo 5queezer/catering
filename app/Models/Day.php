@@ -8,4 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Day extends Model
 {
     use HasFactory;
+    public function menus() {
+        return $this->hasMany('App\Models\Menu');
+    }
 }

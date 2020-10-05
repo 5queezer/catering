@@ -7,8 +7,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class Menu extends Model
 {
-    public function dishes() {
-        
-    }
     use HasFactory;
+    public function dishes() {
+        return $this->hasMany('App\Models\Dish');
+    }
 }
